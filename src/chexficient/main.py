@@ -21,7 +21,7 @@ import util.misc as misc
 
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 import torch.nn as nn
-from models_clip import CheXficient
+from src.chexficient.models_clip import CheXficient
 from engine import train_one_epoch, evaluate, warmup_prototypes
 import torchvision.transforms as transforms
 from PIL import Image
@@ -225,7 +225,7 @@ def main_worker(gpu, args):
             print("resuming", args.resume, "from step", step[0], "with best_acc", best_acc[0])
         else:
             print("assuming a huggingface transformer pretrained model (no optimizer states).")
-            from models_clip import TextEncoder
+            from src.chexficient.models_clip import TextEncoder
             metric = evaluate(args, model, tokenizer)
             model = TextEncoder.from_pretrained(args.resume)
 
