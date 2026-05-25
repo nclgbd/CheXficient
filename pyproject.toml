@@ -25,7 +25,7 @@ dependencies = [
     "gitpython==3.1.44",
     "h5py==3.14.0",
     "hf-xet==1.1.5",
-    "huggingface-hub==0.33.0",
+    "huggingface-hub",
     "idna==3.4",
     "iopath==0.1.10",
     "jinja2==3.1.4",
