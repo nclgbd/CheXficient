@@ -72,7 +72,6 @@ class TextEncoder(nn.Module):
         # self.tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir='./huggingface/tokenizers')
         self.model = AutoModel.from_pretrained(
             model_name,
-            use_safetensors=True,
             ignore_mismatched_sizes=False,
         )
         self.tokenizer = AutoTokenizer.from_pretrained(

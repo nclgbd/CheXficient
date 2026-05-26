@@ -162,6 +162,8 @@ cython_debug/
 # local
 *=*
 .data/
+src/chexficient/dinov2/layers/__pycache__/
+src/chexficient/dinov2/models/__pycache__/
 mlruns/
 outputs/
 CheXficient
